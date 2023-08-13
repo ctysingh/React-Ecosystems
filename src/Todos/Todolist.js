@@ -1,10 +1,13 @@
 import React from "react";
-import "./Todolist.css"
+import NewTodoForm from "./NewTodoForm";
+import TodoListItem from "./TodoListItem";
+import "./TodoList.css"
 
-const Todolist = () => (
-    <div>
-        <h1>To Do list componnet</h1>
+const TodoList = ({todos = [{text:"hello"}]}) => (
+    <div className="list-wrapper">
+        <NewTodoForm></NewTodoForm>
+        {todos.map(todo => <TodoListItem todo={todo}/>)}
     </div>
 )
 
-export default Todolist;
+export default TodoList;

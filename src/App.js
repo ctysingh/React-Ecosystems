@@ -1,11 +1,11 @@
 import React from "react";
 import {hot} from "react-hot-loader";
-import Todolist from "./Todos/Todolist";
-import './App.css'
+import TodoList from './Todos/TodoList';
+import './App.css';
 
 const App = ()=> (
     <div className="App">
-       <Todolist></Todolist>
+       <TodoList/>
     </div>
     
 )

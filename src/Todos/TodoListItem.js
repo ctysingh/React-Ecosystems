@@ -1,13 +1,15 @@
 import React from "react";
-import './Todolist.css'
+import './TodoListItem.css'
 
 const TodoListItem = ({todo}) => (
-    <div className="list-item">
+    <div className="todo-item-container">
+
         <h3> {todo.text} </h3>
-        <div>
-            <button>Mark As Complete</button>
-            <button>Remove</button>
+        <div className="buttons-container">
+            <button className="complete-buttom">Mark As Complete</button>
+            <button className="remove-buttom">Remove</button>
         </div>
+
     </div>
 )
 

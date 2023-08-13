@@ -1,0 +1,9 @@
+.todo-item-container{
+    margin: 1%;
+    display: flex;
+}
+
+.buttons-container{
+    margin: 20px;
+}
+

@@ -7,3 +7,10 @@
     margin: 20px;
 }
 
+.mark-complete-button {
+    margin: 1px;
+}
+.remove-todo-button{
+    background-color: red;
+}
+

@@ -6,8 +6,8 @@ const TodoListItem = ({todo}) => (
 
         <h3> {todo.text} </h3>
         <div className="buttons-container">
-            <button className="complete-buttom">Mark As Complete</button>
-            <button className="remove-buttom">Remove</button>
+            <button className="mark-complete-button">Mark As Complete</button>
+            <button className="remove-todo-button">Remove</button>
         </div>
 
     </div>

@@ -1,5 +1,10 @@
 import { CREATE_TODO, REMOVE_TODO } from "./action";
 
+/* reducer function takes two paramter 
+   1. state - represent current state array
+   2. action - action object contains type & payload
+ */
+
 export const todos = (state=[], action) => {
     const {type, payload} = action;
 

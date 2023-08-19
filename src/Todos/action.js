@@ -7,7 +7,7 @@ export const create_todo = text => ({
 
 export const REMOVE_TODO = 'REMOVE_TODO'
 // action creator
-export const remove_todo = text => ({
+export const removeToDo = text => ({
     type:REMOVE_TODO,
     payload:text
 });

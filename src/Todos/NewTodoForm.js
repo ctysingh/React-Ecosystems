@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-import { Connect } from "react-redux";
-import { create_todo } from "./action";
-
-import './NewTodoForm.css'
 import { connect } from "react-redux";
+import { create_todo } from "./action";
+import './NewTodoForm.css'
+
 
 const NewTodoForm = ({ todos, onCreatePressed }) => {
     const [inputValue, setInputValue] = useState('');
@@ -43,4 +42,4 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     onCreatePressed:text => dispatch(create_todo(text))
 })
-export default Connect(mapStateToProps, mapDispatchToProps)(NewTodoForm);
+export default connect(mapStateToProps, mapDispatchToProps)(NewTodoForm);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Connect } from "react-redux";
+import { connect } from "react-redux";
 import NewTodoForm from "./NewTodoForm";
 import TodoListItem from "./TodoListItem";
 import "./TodoList.css"
@@ -18,4 +18,4 @@ const mapDispatchToProps = dispatch => ({
     onRemovePressed: text =>dispatch(removeToDo(text)),    
 });
 
-export default Connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

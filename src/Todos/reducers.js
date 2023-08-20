@@ -1,4 +1,4 @@
-import { CREATE_TODO, REMOVE_TODO } from "./action";
+import { CREATE_TODO, REMOVE_TODO } from "./actions";
 
 /* reducer function takes two paramter 
    1. state - represent current state array

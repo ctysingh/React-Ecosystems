@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { connect } from "react-redux";
-import { create_todo } from "./action";
+import { createTodo } from "./action";
 import './NewTodoForm.css'
 
 
@@ -40,6 +40,6 @@ const mapStateToProps = state => ({
 
 // dispatch trigger a redux action when create too button is clicked in this case
 const mapDispatchToProps = dispatch => ({
-    onCreatePressed:text => dispatch(create_todo(text))
+    onCreatePressed:text => dispatch(createTodo(text))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(NewTodoForm);

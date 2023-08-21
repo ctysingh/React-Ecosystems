@@ -20,6 +20,6 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers(reducers);
-const persistReducer = persistReducer(persistConfig, rootReducer);
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export const configureStore = () => createStore(persistReducer);
+export const configureStore = () => createStore(persistedReducer);

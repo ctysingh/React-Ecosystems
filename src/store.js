@@ -9,6 +9,10 @@ const reducers = {
     todos,
 };
 
+/*
+  storage: defaults to local storage on the web  
+  stateReconciler: tell redux persists how to reconcile intial & stored state of the application
+*/
 const persistConfig = {
     key:'root',
     storage,

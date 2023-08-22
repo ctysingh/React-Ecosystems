@@ -24,9 +24,13 @@ export const todos = (state=[], action) => {
         }
 
         case MARK_AS_COMPLETED:{
-            const {text} = payload;
-            console.log('on mark complted');
-             return state
+            const {text} = payload;           
+             return state.map(todo => {
+                if(todo.text === text ) {
+                     return {...todo, isCompleted:true };
+                }
+                return state
+             });
         }
         default:
             return state;

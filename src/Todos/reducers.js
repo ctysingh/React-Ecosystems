@@ -1,4 +1,4 @@
-import { CREATE_TODO, REMOVE_TODO } from "./actions";
+import { CREATE_TODO, MARK_AS_COMPLETED, REMOVE_TODO } from "./actions";
 
 /* reducer function takes two paramter 
    1. state - represent current state array
@@ -21,6 +21,12 @@ export const todos = (state=[], action) => {
         case REMOVE_TODO: {
             const {text} = payload;
             return state.filter(todo => todo.text != text);            
+        }
+
+        case MARK_AS_COMPLETED:{
+            const {text} = payload;
+            console.log('on mark complted');
+             return state
         }
         default:
             return state;

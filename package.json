@@ -25,10 +25,14 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.22.10",
+    "@babel/runtime": "^7.22.10",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
-    "redux-persist": "^6.0.0"
+    "redux-devtools-extension": "^2.13.9",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2"
   },
   "volta": {
     "node": "16.20.2"

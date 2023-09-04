@@ -2,12 +2,12 @@ import { loadToDosProgress, loadToDosSuccess, loadToDosFailure } from "./Todos/a
 
 export const loadToDos = () => async (dispatch, getState) => {
     try {
-        dispatch(loadToDosProgress);
-        const response = await fetch('http://localhost:8080/todos');
+        dispatch(loadTodosProgress());
+        const response = await fetch('http://localhost:8080/todos-delay');
         const todos = await response.json();
-        dispatch(loadToDosSuccess(todos));
+        dispatch(loadTodosSuccess(todos));
     } catch(e){
-        dispatch(loadToDosFailure);
+        dispatch(loadTodosFailure());
         dispatch(displayAlert(e));
     }   
 

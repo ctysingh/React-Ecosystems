@@ -1,9 +1,9 @@
 import { CREATE_TODO,
         MARK_AS_COMPLETED,
         REMOVE_TODO,
-        LOAD_TO_DOS_PROGRESS,
-        LOAD_TO_DOS_SUCCESS,
-        LOAD_TOD_DOS_FAILURE
+        LOAD_TODOS_PROGRESS,
+        LOAD_TODOS_SUCCESS,
+        LOAD_TODOS_FAILURE
  } from "./actions";
 
 /* reducer function takes two paramter 
@@ -14,10 +14,10 @@ import { CREATE_TODO,
 export const isLoading = (state = false, action) => {
     const {type} = action;
     switch(type){
-        case LOAD_TO_DOS_PROGRESS:
+        case LOAD_TODOS_PROGRESS:
             return true;
-        case LOAD_TO_DOS_SUCCESS:
-        case LOAD_TOD_DOS_FAILURE:
+        case LOAD_TODOS_SUCCESS:
+        case LOAD_TODOS_FAILURE:
             return false;
         default:
             return state;            

@@ -18,19 +18,19 @@ export const markAsCompleted = text => ({
     payload:{text}
 })
 
-export const LOAD_TO_DOS_PROGRESS = 'LOAD_TO_DOS_PROGRESS';
+export const LOAD_TODOS_PROGRESS = 'LOAD_TODOS_PROGRESS';
 export const loadToDosProgress = () => ({
-    type:LOAD_TO_DOS_PROGRESS,
+    type:LOAD_TODOS_PROGRESS,
 });
 
-export const LOAD_TO_DOS_SUCCESS = 'LOAD_TOD_DOS_SUCCESS';
+export const LOAD_TODOS_SUCCESS = 'LOAD_TODOS_SUCCESS';
 export const loadToDosSuccess = (todos) => ({
-    type: LOAD_TO_DOS_SUCCESS,
+    type: LOAD_TODOS_SUCCESS,
     payload:{todos},
 });
 
-export const LOAD_TOD_DOS_FAILURE = 'LOAD_TO_DODS_FAILURE';
+export const LOAD_TODOS_FAILURE = 'LOAD_TODOS_FAILURE';
 export const loadToDosFailure = () => ({
-    type:LOAD_TOD_DOS_FAILURE,
+    type:LOAD_TODOS_FAILURE,
     
 });

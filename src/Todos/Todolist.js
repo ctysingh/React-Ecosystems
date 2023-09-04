@@ -5,7 +5,6 @@ import { loadToDos } from "../thunks";
 import TodoListItem from "./TodoListItem";
 import { removeTodo, markAsCompleted } from "./actions";
 import "./TodoList.css"
-import { isLoading } from "./reducers";
 
 const TodoList = ({todos = [], onRemovePressed, onMarkCompleted,
      isLoading, startLoadingTodos}) => {

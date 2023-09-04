@@ -51,6 +51,13 @@ export const todos = (state=[], action) => {
                 return state
              });
         }
+
+        case LOAD_TODOS_SUCCESS:{
+            const {todos} = payload;
+            return todos;
+        }
+        case LOAD_TODOS_PROGRESS:
+        case LOAD_TODOS_FAILURE:    
         default:
             return state;
 

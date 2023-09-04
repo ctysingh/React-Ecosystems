@@ -1,4 +1,4 @@
-import { loadToDosProgress, loadToDosSuccess, loadToDosFailure } from "./Todos/actions";
+import { loadTodosProgress, loadTodosSuccess, loadTodosFailure } from "./Todos/actions";
 
 export const loadToDos = () => async (dispatch, getState) => {
     try {

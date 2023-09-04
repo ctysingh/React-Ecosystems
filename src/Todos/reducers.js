@@ -1,9 +1,28 @@
-import { CREATE_TODO, MARK_AS_COMPLETED, REMOVE_TODO } from "./actions";
+import { CREATE_TODO,
+        MARK_AS_COMPLETED,
+        REMOVE_TODO,
+        LOAD_TO_DOS_PROGRESS,
+        LOAD_TO_DOS_SUCCESS,
+        LOAD_TOD_DOS_FAILURE
+ } from "./actions";
 
 /* reducer function takes two paramter 
    1. state - represent current state array
    2. action - action object contains type & payload
  */
+
+export const isLoading = (state = false, action) => {
+    const {type} = action;
+    switch(type){
+        case LOAD_TO_DOS_PROGRESS:
+            return true;
+        case LOAD_TO_DOS_SUCCESS:
+        case LOAD_TOD_DOS_FAILURE:
+            return false;
+        default:
+            return state;            
+    }
+}
 
 export const todos = (state=[], action) => {
     const {type, payload} = action;

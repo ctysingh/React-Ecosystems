@@ -7,9 +7,9 @@ export const createTodo = text => ({
 
 export const REMOVE_TODO = 'REMOVE_TODO';
 // action creator
-export const removeTodo = text => ({
+export const removeTodo = todo => ({
     type:REMOVE_TODO,
-    payload:{text}
+    payload:{ todo },
 });
 
 export const MARK_AS_COMPLETED = 'MARK_AS_COMPLETED';

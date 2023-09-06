@@ -4,6 +4,7 @@ import {
         loadTodosFailure,
         removeTodo, 
         createTodo,
+        markAsCompleted,
     } from "./Todos/actions";
 
 export const loadToDos = () => async (dispatch, getState) => {

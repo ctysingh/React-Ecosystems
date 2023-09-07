@@ -1,2 +1,2 @@
-export const getTodos = state => state.todos;
-export const getTodoLoading = state => state.isLoading;
+export const getTodos = state => state.todos.data;
+export const getTodoLoading = state => state.todos.isLoading;

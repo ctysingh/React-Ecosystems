@@ -1,6 +1,6 @@
 import React from "react";
 import {hot} from "react-hot-loader";
-import TodoList from './Todos/TodoList';
+import TodoList from './Todos/Todolist';
 import './App.css';
 
 const App = ()=> (

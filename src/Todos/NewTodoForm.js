@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { connect } from "react-redux";
 import { addTodoRequest } from "../thunks";
+import { getTodos } from "./selectors";
 import './NewTodoForm.css'
 
 
@@ -35,7 +36,7 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
 // get the object state list specific to current form from the bigger list of different state
 // in actual applicatio state contains more than one list of object state
 const mapStateToProps = state => ({
-    todos: state.todos,
+    todos: getTodos(state),
 });
 
 // dispatch trigger a redux action when create too button is clicked in this case

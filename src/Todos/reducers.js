@@ -11,9 +11,9 @@ import { CREATE_TODO,
    2. action - action object contains type & payload
  */
 
-const intialTodos = { isLoading:false, data:[]};
+const intialState = { isLoading: false, data: [] };
 
-export const todos = (state=intialTodos, action) => {
+export const todos = (state = intialState, action) => {
     const {type, payload} = action;
 
     switch(type){
@@ -21,7 +21,7 @@ export const todos = (state=intialTodos, action) => {
             const {todo}= payload;     
             return {
                 ...state,
-                data: state.data.concat(todo)
+                data: state.data.concat(todo),
             };
         }
         case REMOVE_TODO: {
@@ -31,7 +31,6 @@ export const todos = (state=intialTodos, action) => {
                 data:state.data.filter(todo => todo.id != todoToRemove.id),
             };              
         }
-
         case MARK_AS_COMPLETED:{
             const {todo: todoAsCompleted} = payload;           
              return {
@@ -40,10 +39,10 @@ export const todos = (state=intialTodos, action) => {
                     if(todo.id === todoAsCompleted.id ) {
                         return todoAsCompleted;
                     }
+                    return todo;
                 }),
              } ;           
         }
-
         case LOAD_TODOS_SUCCESS:{
             const {todos} = payload;
             return {
@@ -64,7 +63,5 @@ export const todos = (state=intialTodos, action) => {
         }; 
         default:
             return state;
-
     }
-
 }
